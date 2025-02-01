@@ -296,7 +296,7 @@ body {
 }
 
 .bpw-date-container {
-  color: #666;
+  color: black;
   text-align: center;
   font-size: 12px;
   margin: 40px 0 20px;
@@ -387,12 +387,12 @@ body {
 
 .bpw-bubble-session_reset {
   border: none;
-  border-top: 1px solid red;
-  border-bottom: 1px solid red;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .bpw-bubble-session_reset .bpw-chat-bubble-content {
-  color: red;
+  color: blue;
   background: none !important;
   padding: 0;
   margin: 5px 0;

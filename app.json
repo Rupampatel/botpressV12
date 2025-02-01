@@ -16,6 +16,11 @@
     "PGSSLMODE": {
       "description": "Should be left as is.",
       "value": "require"
+    },
+   
+    "BP_MODULE_NLU_DUCKLINGURL" : {
+      "description": "Should be left as is.",
+      "value": "http://botpress_lang:8000"
     }
   },
   "success_url": "/",
