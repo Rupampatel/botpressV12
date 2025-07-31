@@ -4,6 +4,8 @@ import cx from 'classnames'
 import React, { FC } from 'react'
 
 import logo from './media/bp-logo-white.png'
+import logo1 from './media/dataman-logo.png'
+
 import style from './style.scss'
 
 interface Props {
@@ -20,11 +22,12 @@ const LoginContainer: FC<Props> = props => {
       <div className={cx('middle', style.middle)}>
         <div className={cx('inner', style.inner)}>
           <img className={cx('logo', style.logo)} src={logo} alt="loading" />
+          {/* <h1 style={{ fontFamily: 'Fannins' }}>Botlab Login Portal</h1> */}
           <div className={cx('card', 'card_body', style.card, style.card_body)}>
             <div className={cx('card_body', 'login_box', style.card_body, style.login_box)}>
               <div>
                 <div className={cx('card_title', style.card_title)}>
-                  <strong>{props.title || 'Botpress'}</strong>
+                  <strong>{props.title || 'Botlab'}</strong>
                 </div>
 
                 <div className={cx('card_text', style.card_text)}>{props.subtitle || ''}</div>
@@ -35,12 +38,35 @@ const LoginContainer: FC<Props> = props => {
             </div>
           </div>
           {props.poweredBy && (
-            <div className={cx('homepage', style.homepage)}>
-              <p>
-                {lang.tr('admin.poweredBy')} <a href="https://botpress.com">Botpress</a>
-              </p>
-            </div>
-          )}
+  <div className={cx('homepage', style.homepage)}>
+    <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+      <p style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#999' }}>
+        {lang.tr('admin.poweredBy')}
+        <a
+          href="https://dataman.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: 'inline-block' }}
+        >
+          <img
+            src={logo1}
+            alt="Dataman Logo"
+            style={{
+              maxHeight: '60px',   // Or adjust as needed
+              height: 'auto',
+              width: 'auto',
+              objectFit: 'contain',
+              imageRendering: 'auto',  // Ensures no blurring
+            }}
+          />
+        </a>
+      </p>
+    </div>
+  </div>
+)}
+
+
+
         </div>
       </div>
     </div>

@@ -101,7 +101,7 @@ body {
 .bpw-bot-avatar svg {
   border: solid 3px white;
   border-radius: 50%;
-  background: #ccc;
+  /* background: #ccc; */
 }
 
 .bpw-button {
@@ -706,12 +706,13 @@ body {
 
 .bpw-send-button:hover,
 .bpw-send-button:focus {
-  background: #d8d8d8;
+  background: #3f3db6;
 }
 
 /** HEADER STUFF */
 
 .bpw-header-container {
+  background: #4a7fa0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

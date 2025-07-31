@@ -257,12 +257,12 @@ export class ConfigProvider {
   public async getBrandingConfig(appName: 'admin' | 'studio' | 'webchat') {
     const defaultConfig = {
       admin: {
-        title: 'Botpress Admin Panel',
+        title: 'Botlab Chatbot Panel',
         favicon: 'assets/admin/ui/public/favicon.ico',
         customCss: ''
       },
       studio: {
-        title: 'Botpress Studio',
+        title: 'Botlab Studio',
         favicon: 'assets/studio/ui/public/img/favicon.png',
         customCss: ''
       },

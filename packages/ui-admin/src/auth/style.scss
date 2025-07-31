@@ -3,7 +3,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: white;
 
   .middle {
     display: table-cell;
@@ -23,6 +23,7 @@
     margin: auto;
     margin-bottom: 40px;
   }
+
 
   .login_btn {
     background: white;
@@ -58,7 +59,7 @@
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #ffffff7c;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -80,14 +81,27 @@
     margin-bottom: 1rem;
   }
 }
+.homepage {
+  text-align: center;
 
-.homepage p {
-  &,
-  a {
+  p {
+    margin-top: 1rem;
     color: #999;
+
+    a {
+      color: #999;
+      display: inline-block;
+
+      img {
+        max-height: 60px;
+        object-fit: contain;
+        image-rendering: auto;
+      }
+      
+    }
   }
-  margin-top: 1rem;
 }
+
 
 $very-weak: darkred;
 $weak: #cd4246;

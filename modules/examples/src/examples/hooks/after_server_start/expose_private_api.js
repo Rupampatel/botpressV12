@@ -50,7 +50,7 @@ const exposeApi = async () => {
   })
 
   let apiUrl = await router.getPublicPath()
-  apiUrl = apiUrl.replace('BOT_ID', '___')
+  apiUrl = apiUrl.replace('BOT_ID', 'aarogi')
   bp.logger.info(`Private API Path is ${apiUrl}`)
 }
 

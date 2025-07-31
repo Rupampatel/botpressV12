@@ -10,7 +10,7 @@ services:
     ports:
       - 3000:3000
     environment:
-      - DATABASE_URL=postgres://postgres:secretpw@postgres:5435/botpress_db
+      - DATABASE_URL=postgres://postgres:Rupam@123@postgres:5435/Rupam
       - BP_MODULE_NLU_DUCKLINGURL=http://botpress_lang:8000
       - BP_MODULE_NLU_LANGUAGESOURCES=[{"endpoint":"http://botpress_lang:3100"}]
       - EXTERNAL_URL=http://localhost:3000
@@ -39,8 +39,8 @@ services:
     container_name: postgres
     environment:
       PGPORT: 5435
-      POSTGRES_DB: botpress_db
-      POSTGRES_PASSWORD: secretpw
+      POSTGRES_DB: Rupam
+      POSTGRES_PASSWORD: 
       POSTGRES_USER: postgres
     volumes:
       - pgdata:/var/lib/postgresql/data

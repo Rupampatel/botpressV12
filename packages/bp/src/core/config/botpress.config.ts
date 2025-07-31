@@ -38,7 +38,7 @@ export interface LogsConfig {
    * The database output will not record Debug logs.
    */
   dbOutput: {
-    /**
+    /** 
      * Logs will be kept for this amount of time in the database
      * @default 2 weeks
      */
@@ -217,7 +217,7 @@ export interface BotpressConfig {
       admin: {
         /**
          * Change the name displayed in the title bar on the admin panel
-         * @example "Botpress Admin Panel"
+         * @example "Botlab Chatbot Panel"
          */
         title?: string
         /**
@@ -234,7 +234,7 @@ export interface BotpressConfig {
       studio: {
         /**
          * Change the name displayed in the title bar on the studio
-         * @example "Botpress Studio"
+         * @example "Botlab Studio"
          */
         title?: string
         /**

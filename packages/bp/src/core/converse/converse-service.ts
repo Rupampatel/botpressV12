@@ -183,14 +183,30 @@ export class ConverseService {
     })
   }
 
-  private _handleCapturePayload(event: IO.OutgoingEvent) {
-    const userKey = buildUserKey(event.botId, event.target)
-    if (!this._responseMap[userKey]) {
-      this._responseMap[userKey] = { responses: [] }
-    }
+  // private _handleCapturePayload(event: IO.OutgoingEvent) {
+  //   const userKey = buildUserKey(event.botId, event.target)
+  //   if (!this._responseMap[userKey]) {
+  //     this._responseMap[userKey] = { responses: [] }
+  //   }
 
-    this._responseMap[userKey].responses!.push(event.payload)
+  //   this._responseMap[userKey].responses!.push(event.payload)
+  // }
+
+    private _handleCapturePayload(event: IO.OutgoingEvent) {
+  const userKey = buildUserKey(event.botId, event.target)
+
+  if (!this._responseMap[userKey]) {
+    this._responseMap[userKey] = { responses: [] }
   }
+
+  const modifiedPayload = {
+    ...event.payload,
+    timestamp: new Date().toISOString() //add current UTC timestamp
+  }
+
+  this._responseMap[userKey].responses!.push(modifiedPayload)
+}
+
 
   private _handleCaptureContext(event: IO.IncomingEvent) {
     const userKey = buildUserKey(event.botId, event.target)
